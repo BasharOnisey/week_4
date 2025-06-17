@@ -51,20 +51,20 @@ public class MainActivity extends AppCompatActivity {
                 taskEditText.setText("");
                 urgentSwitch.setChecked(false);
             } else {
-                Toast.makeText(this, "Please enter a task.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getString(R.string.enter_task_toast), Toast.LENGTH_SHORT).show();
             }
         });
 
         // Long click to delete
         taskListView.setOnItemLongClickListener((parent, view, position, id) -> {
             new AlertDialog.Builder(MainActivity.this)
-                    .setTitle("Do you want to delete this?")
-                    .setMessage("The selected row is: " + position)
-                    .setPositiveButton("Yes", (dialog, which) -> {
+                    .setTitle(getString(R.string.delete_dialog_title))
+                    .setMessage(getString(R.string.delete_dialog_message, position))
+                    .setPositiveButton(getString(R.string.yes), (dialog, which) -> {
                         todoList.remove(position);
                         adapter.notifyDataSetChanged();
                     })
-                    .setNegativeButton("No", null)
+                    .setNegativeButton(getString(R.string.no), null)
                     .show();
             return true;
         });
