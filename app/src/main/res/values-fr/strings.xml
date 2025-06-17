@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Application de tâches</string>
+    <string name="type_here_hint">Écrivez ici</string>
+    <string name="urgent_label">Urgent</string>
+    <string name="add_button">Ajouter</string>
+    <string name="delete_dialog_title">Voulez-vous supprimer ceci ?</string>
+    <string name="delete_dialog_message">La ligne sélectionnée est : %1$d</string>
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
+    <string name="enter_task_toast">Veuillez entrer une tâche.</string>
+</resources>
